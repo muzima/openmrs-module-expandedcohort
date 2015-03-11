@@ -16,13 +16,13 @@
 	
 	<changeSet id="cumulativecohort-2015-03-09-15:50" author="msavai">
 		<preConditions onFail="MARK_RAN">
-			<not><tableExists tableName="cumulativecohort"/></not>
+			<not><tableExists tableName="cumulative_cohort_criteria"/></not>
 		</preConditions>
 		<comment>
 			Creating the cumulativecohort table
 		</comment>
-		<createTable tableName="cumulativecohort">
-		    <column name="cumulativecohort_id" type="int">
+		<createTable tableName="cumulative_cohort_criteria">
+		    <column name="id" type="int">
 			    <constraints primaryKey="true" nullable="false"/>
 		    </column>
 		    <column name="cohort_id" type="int"/>

@@ -7,7 +7,7 @@
 		<version>0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>basicmodule-api</artifactId>
+	<artifactId>cumulativecohort-api</artifactId>
 	<packaging>jar</packaging>
 	<name>Cumulative Cohort API</name>
 	<description>API project for Basic Module</description>
@@ -20,7 +20,13 @@
 			<artifactId>library-name</artifactId>
 		</dependency>
 		-->
-		
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reporting-api</artifactId>
+			<version>0.8.1</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.openmrs.api</groupId>
 			<artifactId>openmrs-api</artifactId>

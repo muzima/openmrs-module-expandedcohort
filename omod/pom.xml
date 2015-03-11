@@ -15,7 +15,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
-			<artifactId>basicmodule-api</artifactId>
+			<artifactId>cumulativecohort-api</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		
