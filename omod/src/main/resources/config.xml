@@ -18,13 +18,20 @@
 	<!-- /Base Module Properties -->
 	
 	<require_version>${openMRSVersion}</require_version>
+	<require_modules>
+		<require_module version="1.5.4.1">org.openmrs.module.reportingcompatibility</require_module>
+	</require_modules>
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+		CohortCriteriaData.hbm.xml
+	</mappingFiles>
 	
-	<!-- Extensions -->
+
 	<extension>
 		<point>org.openmrs.admin.list</point>
-		<class>@MODULE_PACKAGE@.extension.html.AdminList</class>
+		<class>org.openmrs.module.cumulativecohort.extension.html.AdminList</class>
 	</extension>
-	
+
 	
 	<!-- AOP
 	<advice>

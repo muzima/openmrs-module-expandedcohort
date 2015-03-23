@@ -21,39 +21,43 @@ public class HibernateCohortCriteriaDataDao implements CohortCriteriaDataDao{
     protected SessionFactory sessionFactory;
     protected Class mappedClass =CohortCriteriaData.class;
 
+    public HibernateCohortCriteriaDataDao(){
+        super();
+    }
+
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    @Override
+
     public CohortCriteriaData getById(Integer id){
         return (CohortCriteriaData)sessionFactory.getCurrentSession().get(mappedClass,id);
     }
 
-    @Override
-    public List<CohortCriteriaData> getAll(){
+
+    public List<CohortCriteriaData> getAll(){;
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(mappedClass);
         return (List<CohortCriteriaData>) criteria.list();
     }
 
-    @Override
+
     public CohortCriteriaData saveOrUpdate(CohortCriteriaData object){
         sessionFactory.getCurrentSession().saveOrUpdate(object);
         return object;
     }
 
-    @Override
+
     public CohortCriteriaData update(CohortCriteriaData object){
         sessionFactory.getCurrentSession().update(object);
         return object;
     }
 
-    @Override
+
     public void delete(CohortCriteriaData object){
         sessionFactory.getCurrentSession().delete(object);
     }
 
-    @Override
+
     public Number count(){
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(mappedClass);
         criteria.add(Restrictions.eq("voided", Boolean.FALSE));

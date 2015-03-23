@@ -47,7 +47,7 @@ public class AdminList extends AdministrationSectionExt {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		
-		map.put("module/cumulativecohort/basicmoduleLink.form", "cumulativecohort.replace.this.link.name");
+		map.put("module/cumulativecohort/view.list", "cumulativecohort.view");
 		
 		return map;
 	}

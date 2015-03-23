@@ -12,6 +12,7 @@
 	<name>Cumulative Cohort API</name>
 	<description>API project for Basic Module</description>
 
+
 	<dependencies>
 		<!-- 
 		Add other dependencies from lib:
@@ -24,6 +25,13 @@
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>reporting-api</artifactId>
 			<version>0.8.1</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reportingcompatibility-api</artifactId>
+			<version>1.5.4.1</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>

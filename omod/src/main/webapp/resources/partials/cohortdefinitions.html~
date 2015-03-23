@@ -1,0 +1,45 @@
+<div id="wide-sidebar" class="row-fluid">
+    <div class="span2">
+        <ul class="nav nav-tabs nav-stacked">
+            <li class="navigation-active"><a href="#/cohortdefinitions">Definitions</a></li>
+            <li><a href="#/newcohortdefinition">Add new</a></li>
+        </ul>
+    </div>
+    <div class="span8">
+        <div class="clearfix">
+            <div class="row">
+            </div>
+            <div class="row">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>                  
+                        <th>Open</th>
+                        <th>Cohort Name</th>
+                        <th>Description</th>
+                        <th>Criteria</th>
+                        <th>Scheduled</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-hide="cohortdefinitions.length">
+                        <td colspan="4">No Expanded Cohorts defined.</td>
+                    </tr>
+                    <tr ng-repeat="cohortdefinition in cohortdefinitions | orderBy:'submitted':true">
+                        <td><a href="#/expandedcohort/{{cohortdefinition.uuid}}"><i class=icon-edit></i></a></td>
+                        <td>{{cohortdefinition.cohort.name}}</td>
+                        <td>{{cohortdefinition.cohort.description}}</td>
+                        <td>{{cohortdefinition.criteria}}</td>
+                        <td><pre>{{cohortdefinition.isscheduled }}</pre></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-show="noOfPages > 1" class="row">
+                <div class="span12 pull-left">
+                    <pagination num-pages="noOfPages" current-page="currentPage" max-size="maxSize" boundary-links="true"></pagination>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+</div>

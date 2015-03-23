@@ -10,7 +10,7 @@
             <generator class="native"/>
         </id>
 
-        <property name="cohort_id" type="java.lang.Integer" column="cohort_id" unique="true"/>
+        <property name="cohortId" type="java.lang.Integer" column="cohort_id" unique="true"/>
         <property name="criteria" type="java.lang.String" column="criteria"/>
 
         <many-to-one name="creator" class="org.openmrs.User" not-null="true">

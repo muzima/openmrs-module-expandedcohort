@@ -10,24 +10,24 @@ public class CohortCriteriaData  extends BaseOpenmrsData implements Serializable
     private static final long serialVersionUID = 1L;
 
     private Integer id;
-    private Integer cohort_id;
+    private Integer cohortId;
     private String criteria;
-    @Override
+
     public Integer getId() {
         return id;
     }
 
-    @Override
+
     public void setId(final Integer id) {
         this.id = id;
     }
 
     public Integer getCohortId(){
-        return cohort_id;
+        return cohortId;
     }
 
-    public void setCohort_id(final Integer cohort_id){
-        this.cohort_id=cohort_id;
+    public void setCohortId(final Integer cohortId){
+        this.cohortId=cohortId;
     }
 
     public String getCriteria(){
