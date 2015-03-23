@@ -26,10 +26,10 @@
                     </tr>
                     <tr ng-repeat="cohortdefinition in cohortdefinitions | orderBy:'submitted':true">
                         <td><a href="#/expandedcohort/{{cohortdefinition.uuid}}"><i class=icon-edit></i></a></td>
-                        <td>{{cohortdefinition.cohort.name}}</td>
-                        <td>{{cohortdefinition.cohort.description}}</td>
-                        <td>{{cohortdefinition.criteria}}</td>
-                        <td><pre>{{cohortdefinition.isscheduled }}</pre></td>
+                        <td>{{cohortdefinition.name}}</td>
+                        <td>{{cohortdefinition.description}}</td>
+                        <td><pre>{{cohortdefinition.criteria}}</pre></td>
+                        <td>{{cohortdefinition.isscheduled }}</td>
                     </tr>
                     </tbody>
                 </table>

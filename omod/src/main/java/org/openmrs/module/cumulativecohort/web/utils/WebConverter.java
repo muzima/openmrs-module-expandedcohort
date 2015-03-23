@@ -14,8 +14,8 @@ public class WebConverter {
         if(cohortCriteriaData!=null){
             map.put("criteria",cohortCriteriaData.getCriteria());
             map.put("isScheduled",true);
-            map.put("cohort.name","name");
-            map.put("cohort.description","description");
+            map.put("name","name");
+            map.put("description","description");
         }
         return map;
     }
