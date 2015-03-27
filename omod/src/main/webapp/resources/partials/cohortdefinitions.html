@@ -2,7 +2,7 @@
     <div class="span2">
         <ul class="nav nav-tabs nav-stacked">
             <li class="navigation-active"><a href="#/cohortdefinitions">Definitions</a></li>
-            <li><a href="#/newcohortdefinition">Add new</a></li>
+            <li><a href="#/createcohortdefinition">Add new</a></li>
         </ul>
     </div>
     <div class="span8">
@@ -17,7 +17,7 @@
                         <th>Cohort Name</th>
                         <th>Description</th>
                         <th>Criteria</th>
-                        <th>Scheduled</th>
+                        <th>Scheduled weekly runs</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,11 +25,11 @@
                         <td colspan="5">No Expanded Cohorts defined.</td>
                     </tr>
                     <tr ng-repeat="cohortdefinition in cohortdefinitions | orderBy:'submitted':true">
-                        <td><a href="#/expandedcohort/{{cohortdefinition.uuid}}"><i class=icon-edit></i></a></td>
+                        <td><a href="#/cohortdefinition/{{cohortdefinition.uuid}}"><i class=icon-edit></i></a></td>
                         <td>{{cohortdefinition.name}}</td>
                         <td>{{cohortdefinition.description}}</td>
-                        <td><pre>{{cohortdefinition.criteria}}</pre></td>
-                        <td>{{cohortdefinition.isscheduled }}</td>
+                        <td><pre>{{cohortdefinition.definition}}</pre></td>
+                        <td>{{cohortdefinition.isscheduled}}</td>
                     </tr>
                     </tbody>
                 </table>

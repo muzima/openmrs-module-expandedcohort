@@ -3,18 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.openmrs.module</groupId>
-	<artifactId>cumulativecohort</artifactId>
+	<artifactId>expandedcohort</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Cumulative Cohort Module</name>
+	<name>Expanded Cohort Module</name>
 	<description>A module that provides user interface for defining cohort criteria and runs a scheduled task to add members that cohort.</description>
 
 	<url> </url>
 
 	<scm>
-		<connection>scm:git:git@github.com:mssavai/openmrs-module-cumulativecohort.git</connection>
-		<developerConnection>scm:git:git@github.com:mssavai/openmrs-module-cumulativecohort.git</developerConnection>
-		<url>https://github.com/mssavai/openmrs-module-cumulativecohort/</url>
+		<connection>scm:git:git@github.com:muzima/openmrs-module-expandedcohort.git</connection>
+		<developerConnection>scm:git:git@github.com:muzima/openmrs-module-expandedcohort.git</developerConnection>
+		<url>https://github.com/muzima/openmrs-module-expandedcohort/</url>
 	</scm>
 
 	<modules>

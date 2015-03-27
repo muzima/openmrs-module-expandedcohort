@@ -10,16 +10,16 @@
 	<bean parent="serviceContext">
 		<property name="moduleService">
 			<list>
-				<value>org.openmrs.module.cumulativecohort.api.CohortCriteriaDataService</value>
+				<value>org.openmrs.module.expandedcohort.api.CohortDefinitionDataService</value>
 				<bean
 					class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
 					<property name="transactionManager">
 						<ref bean="transactionManager" />
 					</property>
 					<property name="target">
-						<bean class="org.openmrs.module.cumulativecohort.api.impl.CohortCriteriaDataServiceImpl">
+						<bean class="org.openmrs.module.expandedcohort.api.impl.CohortDefinitionDataServiceImpl">
 							<property name="dao">
-								<bean class="org.openmrs.module.cumulativecohort.api.db.hibernate.HibernateCohortCriteriaDataDao">
+								<bean class="org.openmrs.module.expandedcohort.api.db.hibernate.HibernateCohortDefinitionDataDao">
 									<property name="sessionFactory">
 										<ref bean="sessionFactory" />
 									</property>
@@ -40,11 +40,11 @@
 	<bean parent="serviceContext">
 		<property name="moduleService">
 			<list>
-				<value>org.openmrs.module.cumulativecohort.api.CumulativeCohortProcessorService</value>
+				<value>org.openmrs.module.expandedcohort.api.ExpandedCohortProcessorService</value>
 				<bean
 						class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
 					<property name="target">
-						<bean class="org.openmrs.module.cumulativecohort.api.impl.CumulativeCohortProcessorServiceImpl">
+						<bean class="org.openmrs.module.expandedcohort.api.impl.ExpandedCohortProcessorServiceImpl">
 						</bean>
 					</property>
 					<property name="preInterceptors">

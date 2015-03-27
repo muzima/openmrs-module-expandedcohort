@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.openmrs.module</groupId>
-		<artifactId>cumulativecohort</artifactId>
+		<artifactId>expandedcohort</artifactId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>cumulativecohort-api</artifactId>
+	<artifactId>expandedcohort-api</artifactId>
 	<packaging>jar</packaging>
-	<name>Cumulative Cohort API</name>
-	<description>API project for Basic Module</description>
+	<name>Expanded Cohort API</name>
+	<description>API project for Expanded Cohort Module</description>
 
 
 	<dependencies>

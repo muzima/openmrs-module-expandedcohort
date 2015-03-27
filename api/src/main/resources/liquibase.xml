@@ -14,24 +14,27 @@
     -->
  
 	
-	<changeSet id="cumulativecohort-2015-03-09-15:50" author="msavai">
+	<changeSet id="expandedcohort-2015-03-19-15:50" author="msavai">
 		<preConditions onFail="MARK_RAN">
-			<not><tableExists tableName="cumulative_cohort_criteria"/></not>
+			<not><tableExists tableName="expanded_cohort_definition"/></not>
 		</preConditions>
 		<comment>
-			Creating the cumulativecohort table
+			Creating the expanded cohort table
 		</comment>
-		<createTable tableName="cumulative_cohort_criteria">
-		    <column name="id" type="int">
+		<createTable tableName="expanded_cohort_definition">
+		    <column name="id" type="int"  autoIncrement="true">
 			    <constraints primaryKey="true" nullable="false"/>
 		    </column>
 		    <column name="cohort_id" type="int"/>
-		    <column name="criteria" type="text"/>
+		    <column name="sql_definition" type="text"/>
+		    <column name="is_scheduled" type="tinyint" defaultValueNumeric="0">
+			<constraints nullable="false"/>
+		    </column>
 		    <column name="creator" type="int">
-			<constraints nullable="true"/>
+			<constraints nullable="false"/>
 		    </column>
 		    <column name="date_created" type="datetime">
-			<constraints nullable="true"/>
+			<constraints nullable="false"/>
 		    </column>
 		    <column name="changed_by" type="int"/>
 		    <column name="date_changed" type="datetime"/>
@@ -42,7 +45,7 @@
 		    <column name="date_voided" type="datetime"/>
 		    <column name="void_reason" type="varchar(255)" defaultValue="null"/>
 		    <column name="uuid" type="char(38)">
-			<constraints nullable="true" unique="false"/>
+			<constraints nullable="false" unique="true"/>
 		    </column>
 		</createTable>
     </changeSet>
