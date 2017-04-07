@@ -20,12 +20,16 @@
 	<require_version>${openMRSVersion}</require_version>
 	<require_modules>
 		<require_module version="1.5.4.1">org.openmrs.module.reportingcompatibility</require_module>
+		<require_module version="2.17">org.openmrs.module.webservices.rest</require_module>
 	</require_modules>
 	<!-- Maps hibernate file's, if present -->
 	<mappingFiles>
 		CohortDefinitionData.hbm.xml
 	</mappingFiles>
-	
+
+	<aware_of_modules>
+		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
+	</aware_of_modules>
 
 	<extension>
 		<point>org.openmrs.admin.list</point>
